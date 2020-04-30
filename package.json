@@ -20,7 +20,7 @@
     "拼多多联盟"
   ],
   "author": "yueyangtang@163.com",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2"
   },
