@@ -1,0 +1,32 @@
+{
+  "name": "pdd-sdk",
+  "version": "1.0.0",
+  "description": "多多进宝nodejs sdk",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev lib/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "拼多多",
+    "多多进宝",
+    "nodejs",
+    "sdk",
+    "多多进宝sdk",
+    "淘宝联盟",
+    "京东联盟",
+    "拼多多联盟"
+  ],
+  "author": "yueyangtang@163.com",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^13.13.4",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  }
+}
