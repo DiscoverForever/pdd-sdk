@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "多多进宝nodejs sdk",
   "main": "dist/index.js",
+  "private": false,
   "scripts": {
     "dev": "ts-node-dev lib/index.ts",
     "build": "tsc",
