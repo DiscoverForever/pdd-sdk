@@ -10,7 +10,7 @@ interface params {
   [propName: string]: any
 }
 
-export class PddSdk {
+export default class PddSdk {
   private clientId: string
   private clientSecret: string
   constructor(option: initOption) {
