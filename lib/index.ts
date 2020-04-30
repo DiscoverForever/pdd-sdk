@@ -77,8 +77,7 @@ export default class PddSdk {
    * @returns { params }
    */
   sort(params: params): params {
-    const EN = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    const sortedArr = Object.keys(params).sort((current, next) => EN.indexOf(current.slice(0, 1).toUpperCase()) - EN.indexOf(next.slice(0, 1).toUpperCase()))
+    const sortedArr = Object.keys(params).sort()
     const sortedParams: params = {}
     sortedArr.forEach(item => sortedParams[item] = params[item])
     return sortedParams
