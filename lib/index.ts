@@ -71,7 +71,7 @@ export default class PddSdk {
    * 对象转key value拼接字符串
    */
   obj2str(params: params): string {
-    const paramsStr = Object.keys(params).map(key => `${key}${encodeURIComponent(params[key])}`).join('')
+    const paramsStr = Object.keys(params).map(key => `${key}${encodeURIComponent(typeof params[key] === 'object' ? JSON.stringify(params[key]) :  params[key])}`).join('')
     return `${this.clientSecret}${paramsStr}${this.clientSecret}`
   }
 
