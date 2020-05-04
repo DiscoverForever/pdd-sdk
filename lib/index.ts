@@ -18,8 +18,12 @@ export default class PddSdk {
     this.clientSecret = option.clientSecret
   }
 
-  execute(apiName: string, requestParams: params): Promise<any> {
-    return request.post('/', this.getRequestParams(apiName, requestParams))
+  async execute(apiName: string, requestParams: params): Promise<any> {
+    const res = await request.post('/', this.getRequestParams(apiName, requestParams))
+    if (Object.prototype.hasOwnProperty.call(res, 'error_response')) {
+      return Promise.reject(res)
+    }
+    return res
   }
 
   /**
