@@ -1,6 +1,6 @@
 {
   "name": "pdd-sdk",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "多多进宝nodejs sdk",
   "main": "dist/index.js",
   "private": false,
