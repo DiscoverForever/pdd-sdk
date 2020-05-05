@@ -31,7 +31,7 @@ export default class PddSdk {
    */
   getRequestParams(apiName: string, requestParams: params) {
     const timestamp = Date.now().toString().slice(0, Date.now().toString().length - 3)
-    return {
+    const params: {[key: string]: any} = {
       timestamp,
       type: apiName,
       client_id: this.clientId,
@@ -43,6 +43,11 @@ export default class PddSdk {
       }),
       ...requestParams
     }
+    // 对象value为object类型 需要JSON.stringify处理为字符串
+    for (const key in params) {
+      params[key] = typeof params[key] === 'object' ? JSON.stringify(params[key]) :  params[key]
+    }
+    return params
   }
 
   /**
